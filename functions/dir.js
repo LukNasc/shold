@@ -1,4 +1,4 @@
-const { exec } = require("child_proccess");
+const { exec } = require("child_process");
 module.exports = {
     /**
      * @description create a new directory
