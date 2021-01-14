@@ -1,7 +1,7 @@
 {
   "name": "shold",
   "version": "1.0.1",
-  "description": "Running command lines linux in nodejs",
+  "description": "Run linux command lines within a NodeJS application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
