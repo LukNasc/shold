@@ -1,9 +1,8 @@
 const { exec } = require('child_process');
-const { resolve } = require('path');
 
 //Import controllers
 const direcories = require("./directories");
-const git = require("./git");
+const git = require("./git-cmd");   
 const security = require("./security")
 
 /**

@@ -3,9 +3,9 @@
 Shold is a lib node js for running linux commands with js.
 
 ## Versions
-- [1.0.2](https://github.com/LukNasc/shold/tree/1.0.1)
+- [1.0.1](https://github.com/LukNasc/shold/tree/1.0.1)
 
-- [1.0.3](#)
+- [1.0.3](https://github.com/LukNasc/shold/tree/1.0.3)
 
 ## Changelog
 

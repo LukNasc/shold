@@ -6,9 +6,9 @@ module.exports = {
      * @param {string} path Path you want to create the directory  
      * @param {string} name directory name
      */
-    async createDirectory(path = "./", name,) {
+    async createDirectory(path = "./", name) {
         //mkdir <path>/<name>
-        const command = "mkidir " + path + "/" + name;
+        const command = "mkdir " + path + "/" + name;
         return new Promise((resolve, reject) => {
             if (name) {
                 exec(command, (error, result, err) => {
@@ -33,8 +33,8 @@ module.exports = {
         // or
         // mkdir <path>/<name>
         const command = oprions.privileges ?
-            getPrivillegeCommand(options.privileges, "mkidir " + options.path + "/" + options.name)
-            : "mkidir " + options.path + "/" + options.name;
+            getPrivillegeCommand(options.privileges, "mkdir " + options.path + "/" + options.name)
+            : "mkdir " + options.path + "/" + options.name;
 
         return new Promise((resolve, reject) => {
             if (options.name) {
