@@ -1,5 +1,7 @@
-const dir = require("./functions/dir")
+const functions = require("./src/functions/")
 module.exports = {
-    createDirectory: dir.createDirectory,
-    changeDirectory: dir.changeDirectory
+    createDirectory: functions.direcories.createDirectory,
+    changeDirectory: functions.direcories.changeDirectory,
+    rawCommand: functions.rawCommand,
+    rawCommandWithPrivileges: functions.rawCommandWithPrivileges
 }

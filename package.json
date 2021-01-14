@@ -1,6 +1,6 @@
 {
   "name": "shold",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Run linux command lines within a NodeJS application",
   "main": "index.js",
   "scripts": {
