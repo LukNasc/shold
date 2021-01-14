@@ -6,9 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Lucas Nascimento",
+  "license": "MIT",
   "engines": {
     "node": ">= 8.0.0"
-  }
+  },
+  "keywords": [
+    "commands",
+    "command lines",
+    "cmd",
+    "nodejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LukNasc/shold"
+  },
+  "homepage": "https://github.com/LukNasc/shold/blob/master/README.md"
 }
