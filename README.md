@@ -30,7 +30,7 @@ const shold = require('shold');
 
 After importing, we can now use the functions that the package provides
 
-### createDirectory
+### createDirectory (mkdir ...)
 
 ```js
 //Create a directory
@@ -47,6 +47,21 @@ const result = await shold.createDirectory({
         password: "password"
     }
 })
+```
+
+### changeDirectory (cd ...)
+```js
+    const result = await shold.changeDirectory("path");
+
+    //or
+
+    const result = await shold.changeDirectory({
+        path: "path",
+        privileges: {
+            user: "user",
+            password: "password"
+        }
+    })
 ```
 ## License
 
