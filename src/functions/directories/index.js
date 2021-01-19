@@ -1,4 +1,5 @@
 const { exec } = require("child_process");
+const Strings = require("../../util/Strings");
 const { getPrivillegeCommand } = require("../security");
 module.exports = {
     /**
@@ -13,13 +14,25 @@ module.exports = {
             if (name) {
                 exec(command, (error, result, err) => {
                     if (!error) {
-                        resolve(command);
+                        resolve({
+                            error: true,
+                            command,
+                            message: Strings.directory.successful_created_directory
+                        });
                     } else {
-                        reject(error);
+                        reject({
+                            error: true,
+                            command,
+                            message: error
+                        });
                     }
                 })
             } else {
-                reject("The directory name cannot be empty")
+                reject({
+                    error: true,
+                    command,
+                    message: Strings.directory.empty_directory_name
+                })
             }
         })
     },
@@ -40,13 +53,25 @@ module.exports = {
             if (options.name) {
                 exec(command, (error, result, err) => {
                     if (!error) {
-                        resolve(command);
+                        resolve({
+                            error: false,
+                            command,
+                            message: Strings.directory.successful_created_directory
+                        });
                     } else {
-                        reject(error);
+                        reject({
+                            error: true,
+                            command,
+                            message: error
+                        });
                     }
                 })
             } else {
-                reject("The directory name cannot be empty")
+                reject({
+                    error: true,
+                    command,
+                    message: Strings.directory.empty_directory_name
+                })
             }
         })
     },
@@ -62,13 +87,25 @@ module.exports = {
             if (path) {
                 exec(command, (error, result, err) => {
                     if (!error) {
-                        resolve(command);
+                        resolve({
+                            error: false,
+                            command,
+                            message: Strings.directory.successful_change_directory
+                        });
                     } else {
-                        reject(error);
+                        reject({
+                            error: true,
+                            command,
+                            message: error
+                        });
                     }
                 })
             } else {
-                reject("The directory path cannot be empty")
+                reject({
+                    error: true,
+                    command,
+                    message: Strings.directory.empty_directory_path
+                })
             }
         })
     },
@@ -89,13 +126,25 @@ module.exports = {
             if (options.path) {
                 exec(command, (error, result, err) => {
                     if (!error) {
-                        resolve(command);
+                        resolve({
+                            error: false,
+                            command,
+                            message: Strings.directory.successful_change_directory
+                        });
                     } else {
-                        reject(error);
+                        reject({
+                            error: true,
+                            command,
+                            message: error
+                        });
                     }
                 })
             } else {
-                reject("The directory path cannot be empty")
+                reject({
+                    error: true,
+                    command,
+                    message: Strings.directory.empty_directory_path
+                })
             }
         })
     },
