@@ -6,7 +6,7 @@ Shold is a lib node js for running linux commands with js.
 - [1.0.1](https://github.com/LukNasc/shold/tree/1.0.1)
 
 - [1.0.3](https://github.com/LukNasc/shold/tree/1.0.3)
-- 
+
 - [1.0.4](https://github.com/LukNasc/shold/tree/1.0.4)
 
 ## Changelog
