@@ -6,17 +6,13 @@ Shold is a lib node js for running linux commands with js.
 - [1.0.1](https://github.com/LukNasc/shold/tree/1.0.1)
 
 - [1.0.3](https://github.com/LukNasc/shold/tree/1.0.3)
+- 
+- [1.0.4](https://github.com/LukNasc/shold/tree/1.0.4)
 
 ## Changelog
-
-### Adding new features to existing functions
-- Running createDirectory function with privileges
-- Running changeDirectory function with privileges
-
 ### Adding new functions
-- rawCommand - Write your own commands
-- rawCommandWithPrivileges - Write your own commands with custom privileges
-- createFile - create files with function very easy
+- createFile - Write your own commands
+- createFile - Write your own commands with custom privileges
 ## Usage
 
 Start by importing the dependency into the file you want to use it
@@ -68,8 +64,8 @@ const result = await shold.createDirectory({
 ```js
     const result = await shold.createFile("nome.txt");
 
-    //or 
-****
+    //or
+
     const result = await shold.createFile({
         fileNameWithExtension: "nome.txt",
         privileges: {
