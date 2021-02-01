@@ -16,7 +16,7 @@ Shold is a lib node js for running linux commands with js.
 ### Adding new functions
 - rawCommand - Write your own commands
 - rawCommandWithPrivileges - Write your own commands with custom privileges
-
+- createFile - create files with function very easy
 ## Usage
 
 Start by importing the dependency into the file you want to use it
@@ -46,7 +46,7 @@ const result = await shold.createDirectory({
         user: "User",
         password: "password"
     }
-})
+});
 ```
 
 ### changeDirectory (cd ...)
@@ -61,8 +61,35 @@ const result = await shold.createDirectory({
             user: "user",
             password: "password"
         }
-    })
+    });
 ```
+### Create files 
+
+```js
+    const result = await shold.createFile("nome.txt");
+
+    //or 
+****
+    const result = await shold.createFile({
+        fileNameWithExtension: "nome.txt",
+        privileges: {
+            user: 'user',
+            passowrd: 'password'
+        }
+    });
+```
+## All functions below
+
+| functions                | Args                                                 | description                                      |
+| ------------------------ | ---------------------------------------------------- | ------------------------------------------------ |
+| createDirectory          | paht, name                                           | create a new directory                                 |
+| createDirectory          | {name, path, privileges:{user, password}}            | create a new directory with another privileges            |
+| changeDirectory          | path                                                 | change directory                                 |
+| changeDirectory          | {path, privileges:{user,password}}                   | change directory with another privileges        |
+| createFiles              | name.txt (parse file`s name with extension)          | create a file with name passed                   |
+| createFiles              | {fileNameWithExtension, privileges:{user, password}} | create a file with name with another privileges |
+| rawCommand               | command                                              | write your own commands                          |
+| rawCommandWithPrivileges | command, privileges:{user, password}                 | write your own commands with another privileges |
 ## License
 
 MIT

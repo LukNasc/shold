@@ -2,8 +2,9 @@ const { exec } = require('child_process');
 
 //Import controllers
 const direcories = require("./directories");
-const git = require("./git-cmd");   
+const git = require("./git-cmd");
 const security = require("./security")
+const files = require('./files/');
 
 /**
  * @description Write owner command
@@ -49,5 +50,6 @@ module.exports = {
     git,
     security,
     rawCommand,
-    rawCommandWithPrivileges
+    rawCommandWithPrivileges,
+    files
 }
